@@ -1,7 +1,13 @@
 [core]
-    remote = storage
+    remote = myminio
     autostage = true
 ['remote "storage"']
     url = s3://kc-dvc/hardml-dvcstore
     region = ru-centrali
     endpointurl = https://storage.yandexcloud.net
+['remote "myminio"']
+    url = s3://mybucket/myproject
+    endpointurl = http://localhost:9000
+    access_key_id = minioadmin
+    secret_access_key = minioadmin
+    use_ssl = False
